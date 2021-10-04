@@ -1,0 +1,24 @@
+# Place this file in /etc/systemd/system/bitfinex-btceur.service
+#
+# Enable it with:
+#   systemctl enable bitfinex-btceur.service
+#   systemctl daemon-reload
+
+[Unit]
+Description=bitfinex-btceur
+After=syslog.target
+
+[Service]
+User=root
+Group=root
+ProtectSystem=full
+Type=simple
+ExecStart=/usr/bin/php <path>/bin/console app:get-bitfinex --currency=btceur \
+--env=prod \
+--no-debug \
+--quiet
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

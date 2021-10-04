@@ -1,0 +1,57 @@
+.table>thead {
+    text-align: center;
+}
+
+.table>thead>tr>th {
+    vertical-align: middle;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th {
+    vertical-align: middle;
+}
+
+.table td, .table th {
+    padding: 0px !important;
+    font-size: 12px;
+}
+
+.table td {
+	text-align:center !important;
+}
+
+.elementGreen {
+    color: green;
+}
+
+.elementRed {
+    color: red;
+}
+
+
+.elementRedToFadeInAndOut {
+    background-color: transparent;
+    -webkit-animation: redfadeinout 2s linear forwards;
+    animation: redfadeinout 2s linear forwards;
+}
+
+.elementGreenToFadeInAndOut {
+    background-color: transparent;
+    -webkit-animation: greenfadeinout 2s linear forwards;
+    animation: greenfadeinout 2s linear forwards;
+}
+
+@-webkit-keyframes redfadeinout {
+  50% { background-color: red; }
+}
+
+@keyframes redfadeinout {
+  50% { background-color: red; }
+}
+
+@-webkit-keyframes greenfadeinout {
+  50% { background-color: green; }
+}
+
+@keyframes greenfadeinout {
+  50% { background-color: green; }
+}

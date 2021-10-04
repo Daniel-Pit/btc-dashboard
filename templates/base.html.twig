@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+	{% block stylesheets %}
+            <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+            <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" />
+        {% endblock %}
+
+	{% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+    </head>
+    <body>
+	<style>
+	    .header { margin: 1em auto; width: 95%; text-align:center; color:#23cccc; font: 18px/1.5 sans-serif; }
+	</style>
+	<div class="header"> <H1> {{ content_title }} </H1> </div>
+        {% block body %}
+
+	    {% endblock %}
+
+        <input type="hidden" name="btc_usd_cache" id="btc_usd_cache" value="{% if usdData is defined and usdData %} {{ usdData }} {% endif %}">
+        <input type="hidden" name="btc_eur_cache" id="btc_eur_cache" value="{% if eurData is defined and eurData %} {{ eurData }} {% endif %}">
+
+    </body>
+</html>

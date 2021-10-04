@@ -1,0 +1,24 @@
+# Place this file in /etc/systemd/system/bitfinex-btcusd.service
+#
+# Enable it with:
+#   systemctl enable bitfinex-btcusd.service
+#   systemctl daemon-reload
+
+[Unit]
+Description=bitfinex-btcusd
+After=syslog.target
+
+[Service]
+User=root
+Group=root
+ProtectSystem=full
+Type=simple
+ExecStart=/usr/bin/php <path>/bin/console app:get-bitfinex --currency=btcusd \
+--env=prod \
+--no-debug \
+--quiet
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

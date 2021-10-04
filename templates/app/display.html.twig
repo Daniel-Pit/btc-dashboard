@@ -1,0 +1,27 @@
+		<tr>
+		    <th rowspan="2">{{ display_title }}</th>
+		    <td rowspan="2" class="{{ display_spot_class }}">{{ display_spot }}</td>
+		    <td rowspan="2" class=" {% if today_change < 0 %} elementRed {% else %} elementGreen {% endif %} ">{{ today_change }}%</td>
+		    <td class="{{ today_high_class }}">{{ today_high }}</td>
+		    <td rowspan="2" class=" {% if ago_24h_change < 0 %} elementRed {% else %} elementGreen {% endif %} ">{{ ago_24h_change }}%</td>
+		    <td class="{{ ago_24h_high_class }}">{{ ago_24h_high }}</td>
+		    <td rowspan="2" class="{% if ago_1w_change < 0 %} elementRed {% else %} elementGreen {% endif %}">{{ ago_1w_change }}%</td>
+		    <td class="{{ ago_1w_high_class }}">{{ ago_1w_high }}</td>
+		    <td rowspan="2" class="{% if ago_1m_change < 0 %} elementRed {% else %} elementGreen {% endif %}">{{ ago_1m_change }}%</td>
+		    <td class="{{ ago_1m_high_class }}">{{ ago_1m_high }}</td>
+		    <td rowspan="2" class="{% if ago_3m_change < 0 %} elementRed {% else %} elementGreen {% endif %}">{{ ago_3m_change }}%</td>
+		    <td class="{{ ago_3m_high_class }}">{{ ago_3m_high }}</td>
+		    <td rowspan="2" class="{% if ago_6m_change < 0 %} elementRed {% else %} elementGreen {% endif %}">{{ ago_6m_change }}%</td>
+		    <td class="{{ ago_6m_high_class }}">{{ ago_6m_high }}</td>
+		    <td rowspan="2" class="{% if ago_1y_change < 0 %} elementRed {% else %} elementGreen {% endif %}">{{ ago_1y_change }}%</td>
+		    <td class="{{ ago_1y_high_class }}">{{ ago_1y_high }}</td>
+		</tr>
+		<tr>
+		    <td class="{{ today_low_class }}">{{ today_low }}</td>
+		    <td class="{{ ago_24h_low_class }}">{{ ago_24h_low }}</td>
+		    <td class="{{ ago_1w_low_class }}">{{ ago_1w_low }}</td>
+		    <td class="{{ ago_1m_low_class }}">{{ ago_1m_low }}</td>
+		    <td class="{{ ago_3m_low_class }}">{{ ago_3m_low }}</td>
+		    <td class="{{ ago_6m_low_class }}">{{ ago_6m_low }}</td>
+		    <td class="{{ ago_1y_low_class }}">{{ ago_1y_low }}</td>
+		</tr>

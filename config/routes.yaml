@@ -1,0 +1,9 @@
+index:
+    path: /
+    controller: App\Controller\AppController::index
+btc-usd:
+    path: /btc-usd
+    controller: App\Controller\AppController::btcusd
+btc-eur:
+    path: /btc-eur
+    controller: App\Controller\AppController::btceur

@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} BTC - Dashboard {% endblock %}
+
+{% block body %}
+
+
+<div class="wrapper">
+	<table class="table" id="btc_usd">
+	    <thead>
+		<tr>
+		    <th rowspan="3">USD</th>
+		    <th rowspan="3">Spot</th>
+		    <th colspan="2">Today</th>
+		    <th colspan="2">24 hours</th>
+		    <th colspan="2">1 week</th>
+		    <th colspan="2">1 month</th>
+		    <th colspan="2">3 months</th>
+		    <th colspan="2">6 months</th>
+		    <th colspan="2">1 year</th>
+		    
+		</tr>
+		<tr>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		</tr>
+		<tr>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		</tr>
+	    </thead>
+	    <tbody id="btc_usd_tbody" data-path="{{ path('btc-usd') }}">
+			{{ usdDataText | raw }}
+	    </tbody>
+	</table>
+	<br><br><br>
+	<table class="table" id="btc_eur">
+	    <thead>
+		<tr>
+		    <th rowspan="3">EUR</th>
+		    <th rowspan="3">Spot</th>
+		    <th colspan="2">Today</th>
+		    <th colspan="2">24 hours</th>
+		    <th colspan="2">1 week</th>
+		    <th colspan="2">1 month</th>
+		    <th colspan="2">3 months</th>
+		    {#<th colspan="2">6 months</th>#}
+		    {#<th colspan="2">1 year</th>#}
+		    
+		</tr>
+		<tr>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    <th rowspan="2">Change %</th>
+		    <th>High</th>
+		    {#<th rowspan="2">Change %</th>#}
+		    {#<th>High</th>#}
+		    {#<th rowspan="2">Change %</th>#}
+		    {#<th>High</th>#}
+		</tr>
+		<tr>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    <th>Low</th>
+		    {#<th>Low</th>#}
+		    {#<th>Low</th>#}
+		</tr>
+	    </thead>
+	    <tbody id = "btc_eur_tbody" data-path="{{ path('btc-eur') }}">
+        	{{ eurDataText | raw }}
+	    </tbody>
+	</table>
+</div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+	<script src="{{ asset('assets/js/main.js') }}"></script>
+{% endblock %}
